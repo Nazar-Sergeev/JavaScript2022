@@ -134,3 +134,7 @@
 // console.log(`${users[7].name} - password: ${users[7].password}`);
 // console.log(`${users[8].name} - password: ${users[8].password}`);
 // console.log(`${users[9].name} - password: ${users[9].password}`);
+//
+// for (let user of users) {
+//     console.log(`${user.name} - password: ${user.password}`)
+// }
