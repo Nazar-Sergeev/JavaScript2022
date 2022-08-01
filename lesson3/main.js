@@ -86,7 +86,7 @@
 //  за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy
 //  (хибноподыбне, тобто кастується до false)
 //
-// let x = prompt('enter the....') || 'default';
+// let x = NaN || 'default';
 // console.log(x);
 
                                                                               //additional
