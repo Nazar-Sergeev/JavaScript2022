@@ -165,7 +165,6 @@
 //
 // returnNumber(10, 1);
 
-
 // - функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
@@ -186,27 +185,26 @@
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
-// const array = [0, 1, 0, 6, 0, 3];
-// const newArray = [];
-//
-// const transfer = (array) => {
-//     let count = 0;
-//     let index = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i] === 0) {
-//             count++;
-//         } else {
-//             newArray[index++] = array[i]
-//         }
-//     }
-//         console.log(newArray);
-//     let zeroLength = newArray.length;
-//     for (let i = 0; i < count; i++) {
-//         newArray[zeroLength++] = 0;
-//     }
-//
-//     return newArray;
-// };
-// transfer(array);
-// console.log(newArray);
-///Останнє завдання зробив не сам.(((
+const array = [0, 1, 0, 0, 0, 1, 0, 6, 0, 3, 0, 1, 2, 3, 4];
+const newArray = [];
+
+const transfer = (array) => {
+    let countZero = 0;
+    let index = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === 0) {
+            countZero++;
+        } else {
+            newArray[index++] = array[i]
+        }
+    }
+        console.log(newArray);
+    let addZero = newArray.length;
+    for (let i = 0; i < countZero; i++) {
+        newArray[addZero++] = 0;
+    }
+
+    return newArray;
+};
+transfer(array);
+console.log(newArray);
