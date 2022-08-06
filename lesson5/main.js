@@ -191,6 +191,7 @@ const newArray = [];
 const transfer = (array) => {
     let countZero = 0;
     let index = 0;
+
     for (let i = 0; i < array.length; i++) {
         if (array[i] === 0) {
             countZero++;
@@ -198,13 +199,13 @@ const transfer = (array) => {
             newArray[index++] = array[i]
         }
     }
-        console.log(newArray);
+
     let addZero = newArray.length;
     for (let i = 0; i < countZero; i++) {
         newArray[addZero++] = 0;
     }
-
     return newArray;
 };
+
 transfer(array);
 console.log(newArray);
