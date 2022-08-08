@@ -185,27 +185,27 @@
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
-const array = [0, 1, 0, 0, 0, 1, 0, 6, 0, 3, 0, 1, 2, 3, 4];
-const newArray = [];
-
-const transfer = (array) => {
-    let countZero = 0; 
-    let index = 0;
-
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === 0) {
-            countZero++;  // Рахуємо скільки в масиві є нулів
-        } else {
-            newArray[index++] = array[i]; // Залишаємо всі елементи масиву крім "0"
-        }
-    }
-
-    let addZero = newArray.length;
-    for (let i = 0; i < countZero; i++) {     
-        newArray[addZero++] = 0;  // Додаємо "0" в масив
-    }
-    return newArray;
-};
-
-transfer(array);
-console.log(newArray);
+// const array = [0, 1, 0, 0, 0, 1, 0, 6, 0, 3, 0, 1, 2, 3, 4];
+// const newArray = [];
+//
+// const transfer = (array) => {
+//     let countZero = 0;
+//     let index = 0;
+//
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] === 0) {
+//             countZero++;  // Рахуємо скільки в масиві є нулів
+//         } else {
+//             newArray[index++] = array[i]; // Залишаємо всі елементи масиву крім "0"
+//         }
+//     }
+//
+//     let addZero = newArray.length;
+//     for (let i = 0; i < countZero; i++) {
+//         newArray[addZero++] = 0;  // Додаємо "0" в масив
+//     }
+//     return newArray;
+// };
+//
+// transfer(array);
+// console.log(newArray);
