@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+                                                  // Lesson 7
+
+    // try catch
+    // console.log('start');
+    // try {
+    //     console.log(error);
+    // }catch (e) {
+    //     console.log(e); //  "е" - Об'єкт помилки (відхопили помилку)
+    // }finally {
+    //     console.log('finally'); // Блок спрацьовує у любому випадку
+    // }
+    // console.log('END');
+
+    // Генерація помилки
+    // const functionDivide = (a, b) => {
+    //     if (b === 0) {
+    //         throw new Error('b is not to by zero!!!!')// примусовий виклик (генерація) помилки
+    //     }
+    //     return a / b;
+    // };
+    // // console.log(functionDivide(10, 0));
+    //
+    // try {
+    //     functionDivide(10, 0);
+    // }catch (e) {
+    //     console.log(e);
+    //     console.log(functionDivide(10, 1));
+    // }
+
+    // Оператор опціанальної послідовності ( * ОСО * )
+    // const user = {
+    //     name: 'Vasya'
+    // }
+    // console.log(user.wife?.age);
+
+    // Objects ES6
+    // let name = 'Vasya';
+    // let age = 30;
+    //
+    // // let user = {
+    // //     name: name,
+    // //     age: age
+    // // }
+    //
+    // let user = { // Те саме
+    //     name, // name: name,
+    //     age, // age: age
+    //     greeting() {             //        greeting: function () {
+    //         console.log('hi');  //              console.log('hi');
+    //     },                     //          }
+    // }
+    // console.log(user);
+    // user.greeting();
+
+    // Деструктуризація об'єктів ( destructuring )
+    // let user = {
+    //     name: 'Vasya',
+    //     age: 31,
+    //     status: true
+    // }
+    //
+    // // let name = user.name
+    // // let age = user.age
+    // // let status = user.status
+    // let {name, age, status} = user; // Те саме
+    //
+    // function foo({name, age}) {
+    //
+    // }
+    //
+    // foo({name: 'Vasya',age: 31,status: true})
+    //
+    // let user = {
+    //     name: 'Vasya',
+    //     age: 31,
+    //     status: true,
+    //     wife:{
+    //         name: 'anna'
+    //     }
+    // }
+    // let {wife, wife: {name}, name: userName} = user; // name: userName переіменували name на userName
+    // console.log(name);
+    // console.log(wife);
+    // console.log(userName)
+
+    // Деструктуризація масивів
+    // let nums = [11, 22, 33];
+    // // let a = nums[0];
+    // // let b = nums[1];
+    // // let c = nums[2];
+    //
+    // let [a, b, c] = nums;
+    //
+    // const users = [
+    //     {name: 'СЕРГЕЙ', userName:'БЕДУХА', city: 'Kyiev', status: true },
+    //     {name: 'ИВАН', userName:'БУЧАКЧИЙСКИЙ', city: 'Lviv', status:false },
+    //     {name: 'АНТОН', userName:'ВАСИЛЕНКО', city: 'Kherson', status: true},
+    //     {name:'ЮРИЙ' , userName:'ГУРОВ', city: 'Harkiv', status: false},
+    //     {name: 'ИГОРЬ', userName:'ДЯНКОВ', city: 'Dnipro', status: true},
+    //     {name: 'ГЛІБ', userName:'КОВАЛЬОВ', city: 'Vinicya', status: true},
+    //     {name: 'СЕРГЕЙ', userName:'ЛЯШЕНКО', city: 'Kyiev', status:true },
+    //     {name: 'ВЛАДИСЛАВ', userName:'СЕМЕНКО', city:'Kyiev' , status:true },
+    //     {name: 'АНТОН', userName:'ТВЕРДОХЛІБ', city:'Lviv' , status:true },
+    //     {name: 'РУСЛАН', userName:'ФИЛЬЧАКОВ', city: 'Kyiev', status: false},
+    //     {name: 'АЛЕКСАНДР', userName:'ХАТЬКО', city:'Dnipro', status:true },
+    // ];
+    //
+    // // let [u1, u2] = users;
+    // let [{age}, u2] = users;
+    // // let {age} = u1; // Те саме
+
+    // SPRED
+    //
+    //     let user = {
+    //         name: 'Vasya',
+    //         age: 31,
+    //         status: true
+    //     }
+    //     console.log(user)
+    //
+    //     let kokos = {...user, wife: true, name: 'kokos'};// Копіюєм об'єкт повністью і додаєм новий ключ "wife" і міняєм значення в ключі "name"
+    //     console.log(kokos)
+
+    // Copy Object
+    //
+    //     let user = {
+    //         name: 'Vasya',
+    //         age: 31,
+    //         wife: {
+    //             name: 'anna'
+    //         },
+    //         greeting() {
+    //             console.log('HI');
+    //         },
+    //     }
+    //     console.log(user)
+    //
+    //     let kokos = {
+    //         ...user,
+    //         status: true,
+    //         name: 'kokos'
+    //     };
+    //     console.log(user.wife === kokos.wife); // TRUE
+    //
+    // // JSON deep copy (глибинна копія) робить копію тільки інформації НЕ повидінки!
+    //
+    //     let userJSON = JSON.stringify(user); // Перетворили об'єкт на стрінгу
+    //     console.log(userJSON);
+    //
+    //     let userParse = JSON.parse(userJSON);// Перетворили стрінгу на об'єкт
+    //     console.log(userParse);
+    //
+    //     console.log(userParse === user);// FALSE
+    //     console.log(userParse.wife === user.wife);// FALSE
+    //
+    //     let parseUser = JSON.parse(JSON.stringify(user));// Те саме тільки короче ( в один рядок )
+    //     console.log(parseUser)
+    //
+    //     let kokos2 = Object.assign({},user); // Робить копію об'єкта ( інформація і поведінку )
+    //     console.log(kokos2);
+
+    // Copy Array
+    // const users = [
+    //     {name: 'СЕРГЕЙ', userName:'БЕДУХА', city: 'Kyiev', status: true },
+    //     {name: 'ИВАН', userName:'БУЧАКЧИЙСКИЙ', city: 'Lviv', status:false },
+    //     {name: 'АНТОН', userName:'ВАСИЛЕНКО', city: 'Kherson', status: true},
+    //     {name:'ЮРИЙ' , userName:'ГУРОВ', city: 'Harkiv', status: false},
+    //     {name: 'ИГОРЬ', userName:'ДЯНКОВ', city: 'Dnipro', status: true},
+    //     {name: 'ГЛІБ', userName:'КОВАЛЬОВ', city: 'Vinicya', status: true},
+    //     {name: 'СЕРГЕЙ', userName:'ЛЯШЕНКО', city: 'Kyiev', status:true },
+    //     {name: 'ВЛАДИСЛАВ', userName:'СЕМЕНКО', city:'Kyiev' , status:true },
+    //     {name: 'АНТОН', userName:'ТВЕРДОХЛІБ', city:'Lviv' , status:true },
+    //     {name: 'РУСЛАН', userName:'ФИЛЬЧАКОВ', city: 'Kyiev', status: false},
+    //     {name: 'АЛЕКСАНДР', userName:'ХАТЬКО', city:'Dnipro', status:true },
+    // ];
+    //
+    // let users2 = [...users];
+    //
+    // console.log(users2);
+    // console.log(users === users2); // FALSE
+    // console.log(users[0] === users2[0]);// TRUE
+    //
+    // let users3 = JSON.parse(JSON.stringify(users));
+    //
+    // console.log(users[0] === users3[0]);// FALSE
+
+    // Closures  Приватність ( замикання )
+    //
+    // let user = {
+    //     name: 'АЛЕКСАНДР',
+    //     age:30,
+    //     city: 'Dnipro',
+    //     status: true,
+    //     foo() {
+    //         console.log('fooBar');
+    //     },
+    // };
+    //
+    // const userBuilder = (name, age) => {
+    //     let user = {name, age}
+    //
+    //     return {
+    //         getAge() {
+    //             return user.age
+    //         },
+    //         getName() {
+    //             return user.name
+    //         },
+    //         setAge(age) {
+    //             if (age > 0) {
+    //                 user.age = age;
+    //             }
+    //         },
+    //         info() {
+    //             return {...user};
+    //         },
+    //     }
+    //
+    // };
+    //
+    // let result = userBuilder('vasya', 111);
+    // console.log(result);
+    //
+    // console.log(result.getName());
+    // console.log(result.getAge());
+    //
+    // result.setAge(-50);
+    // console.log(result.getAge());
+    // console.log(result.info());
+
+
+</script>
+
+</body>
+</html>

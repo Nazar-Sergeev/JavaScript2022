@@ -282,13 +282,13 @@
 
 // - Напишіть функцію capitalize(str), яка повертає рядок,
 // у якому кожне слово починається з великої літери.
-// let str = 'Hello okten Owu com Ua';
-//
-// const capitalize = (str) => {
-//     let wordUp = str.split(' ').filter(value => value >= 'A' && value <= 'Z');
-//     console.log(wordUp)
-// };
-// capitalize(str);
+let str = 'Hello okten Owu com Ua';
+
+const capitalize = (str) => {
+    let wordUp = str.split(' ').filter(value => value >= 'A' && value <= 'Z');
+    console.log(wordUp)
+};
+capitalize(str);
 
 // - Створити функцію-валідатор для адрес електронної пошти.
 // Перевірка повинна включати в себе :
