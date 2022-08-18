@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function User(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    //
+    // let user = new User('vasya', 30); // Створення об'єкта за шаблоном "User"
+    // console.log(user)
+
+    // function User(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.greeting = function (msg) {
+    //         console.log(`${msg} my name is ${this.name}`);
+    //     };
+    // }
+    //
+    // let user = new User('vasya', 30); // Створення об'єкта за шаблоном "User"
+    // console.log(user);
+    //
+    // user.greeting('hello');
+
+    // function User(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.greeting = function (msg,) {
+    //         console.log(`${msg} my name is ${this.name}`);
+    //     };
+    // }
+    //
+    // let user = new User('vasya', 30); // Створення об'єкта за шаблоном "User"
+    // // console.log(user);
+    //
+    // let user2 = {
+    //     name: 'petya',
+    //     age: 32,
+    //     password: '11111'
+    // }
+    // user.greeting('hello');
+
+    // user.greeting.apply(user2);// Викликаємо функцію від "user" і міняєм контекст this на user2
+    // // apply робить підміну this
+
+    // user.greeting.apply(user2, ['Hi']);// ['Hi'] - попадає як аргумент (або масив аргументів) в функцію greeting
+    // user.greeting.call(user2, 'Hi');// 'Hi' - попадає як аргумент в функцію greeting
+
+    // let copyGreeting = user.greeting.bind(user2);// Робить копію функції greeting
+    // copyGreeting('Hi');
+
+    // Наслідування
+    //
+    // function SuperUser(name, age, password) {
+    //     User.apply(this, arguments);// Використовуєм шаблон з "User"
+    //     this.password = password;
+    //     this.greeting = function (msg,) {
+    //         console.log(`${msg} my name is ${this.name}`);
+    //     };
+    // }
+    //
+    // let superUser = new SuperUser('Kolya', 25, 1234);
+    // console.log(superUser)
+    // superUser.greeting('Aloha')
+    //
+    // SuperUser.prototype.foo = () => { // Вбудовує нову функцію
+    //     console.log('new function');
+    // }
+    // superUser.foo();
+
+    // Class Constructor
+    //
+    // class User {
+    //     constructor(name, age) {
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+    //
+    //     greeting() {
+    //         console.log(`hello my name is ${this.name}`);
+    //     }
+    // }
+    //
+    // let user = new User('Vasya', 31);
+    // console.log(user);
+    // user.greeting();
+    //
+    // class SuperUser extends User{ // Наслідування від User
+    //     constructor(name, age,password) {
+    //         super(name, age);
+    //         this.password = password;
+    //     }
+    // }
+    //
+    // let su = new SuperUser('Tanya', 22, 1111);
+    // console.log(su);
+    // su.greeting();
+
+
+</script>
+</body>
+</html>

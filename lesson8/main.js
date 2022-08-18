@@ -73,16 +73,22 @@ function Car(model, producer, yearProduction, maxSpeed, engine) {
         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
     };
     this.info = function () {
-        console.log(
-            `
-            driver : ${this.driver?.name}
-            model: ${this.model}
-            producer: ${this.producer}
-            production years: ${this.yearProduction}
-            max speed: ${this.maxSpeed}
-            engine car: ${this.engine}
-        `
-        );
+        for (const item in this) {
+            if (typeof this[item] !== 'function') {
+                console.log(`${item} - ${this[item]}`)
+            }
+
+        }
+        // console.log(
+        //     `
+        //     driver : ${this.driver?.name}
+        //     model: ${this.model}
+        //     producer: ${this.producer}
+        //     production years: ${this.yearProduction}
+        //     max speed: ${this.maxSpeed}
+        //     engine car: ${this.engine}
+        // `
+        // );
     };
     this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed += newSpeed;
@@ -334,3 +340,87 @@ console.log(car)
 // let tagSelect = new DescriptionTag('select', 'дозволяє створити елемент інтерфейсу у вигляді списку, що розкривається, а також список з одним або множинним вибором.', [attrForm, attrSize]);
 // console.log(tagSelect);
 
+// function UserCard(key, balance = 100, transactionLimit = 100, historyLogs = []) {
+//     const addHistory = (operationType, credits) => {
+//         let timeOperation = new Date().toLocaleTimeString();
+//         let dayOperation = new Date().toLocaleDateString('en-US');
+//         historyLogs.push({operationType, credits, operationTime: {timeOperation, dayOperation}})
+//
+//     }
+//     return {
+//
+//         getCardOptions: () => {
+//             return {
+//                 key,
+//                 balance,
+//                 transactionLimit,
+//                 historyLogs
+//             }
+//         },
+//
+//         putCredits: (credit) => {
+//             balance += credit;
+//             addHistory('Received credits', credit);
+//         },
+//
+//         takeCredits: (credit) => {
+//             if (credit <= balance && credit <= transactionLimit) {
+//                 balance -= credit;
+//             } else {
+//                 console.error('Перевищений ліміт, або недостатньо коштів. Будь-ласка поповніть Ваш рахунок')
+//             }
+//         },
+//
+//         setTransactionLimit: (limit) => {
+//             transactionLimit = limit;
+//             addHistory('Transaction limit change', limit);
+//         },
+//
+//         transferCredits: (credit, card) => {
+//             if (credit * 1.05 <= balance && credit * 1.05 <= transactionLimit) {
+//                 balance -= credit * 1.05;
+//                 card.putCredits(credit);
+//                 addHistory('Withdrawal of credits', credit);
+//             } else {
+//                 console.error('Перевищений ліміт, або недостатньо коштів. Будь-ласка поповніть Ваш рахунок')
+//             }
+//         }
+//     }
+// }
+//
+// class UserAccount {
+//     constructor(name) {
+//         this.name = name;
+//         this.cards = [];
+//     }
+//
+//     addCard() {
+//         const cardsNumber = this.cards.length;
+//         if (cardsNumber === 3) {
+//             console.error('Максимальна кількість карток')
+//         }
+//         this.cards.push(UserCard(cardsNumber + 1));
+//     }
+//
+//     getCardByKey(cardKey) {
+//         if (cardKey > 2 || cardKey < 0) {
+//             console.error('Ви ввели не вірний номер картки!')
+//         }
+//         return this.cards.find(card => card.getCardOptions().key === cardKey);
+//     }
+// }
+//
+// let user = new UserAccount('Вася');
+// user.addCard();
+// user.addCard();
+//
+// let card1 = user.getCardByKey(1);
+// let card2 = user.getCardByKey(2);
+//
+// card1.putCredits(500);
+// card1.setTransactionLimit(600);
+// card1.transferCredits(400, card2);
+// card2.takeCredits(100);
+//
+// console.log(card1.getCardOptions());
+// console.log(card2.getCardOptions());
