@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+<!--    <style>-->
+<!--        .target {-->
+<!--            width: 200px;-->
+<!--            height: 200px;-->
+<!--            border: 2px solid black;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+
+<!--<h1 id="h-1">DOM Title</h1>-->
+<!--<ul class="menu" id="list-1">-->
+<!--    <li>item 1 1</li>-->
+<!--    <li>item 1 2</li>-->
+<!--    <li>item 1 3</li>-->
+<!--    <li>item 1 4</li>-->
+<!--    <li>item 1 5</li>-->
+<!--</ul>-->
+<!--<ul class="menu" id="list-2">-->
+<!--    <li>item 2 1</li>-->
+<!--    <li>item 2 2</li>-->
+<!--    <li>item 2 3</li>-->
+<!--    <li>item 2 4</li>-->
+<!--    <li>item 2 5</li>-->
+<!--</ul>-->
+<!--<h1>before</h1>-->
+<!--<div id="target" class="point">-->
+<!--    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit.-->
+<!--    Aperiam minus quaerat vero. Harum, maxime-->
+<!--    <span>modi non possimus</span> saepe sunt vel!-->
+<!--</div>-->
+<!--<div class="point">-->
+<!--    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit.-->
+<!--    Aperiam minus quaerat vero. Harum, maxime-->
+<!--    <span>modi non possimus</span> saepe sunt vel!-->
+<!--</div>-->
+<!--<div class="point">-->
+<!--    <b>Lorem ipsum dolor</b> sit amet, consectetur adipisicing elit.-->
+<!--    Aperiam minus quaerat vero. Harum, maxime-->
+<!--    <span>modi non possimus</span> saepe sunt vel!-->
+<!--</div>-->
+<!--<h2>After</h2>-->
+
+
+<!--<form action="" name="f1">-->
+<!--    <input type="text" placeholder="username" name="userName">-->
+<!--    <button>send user name</button>-->
+
+<!--</form>-->
+<!--<form action="" name="f2">-->
+<!--    <input type="email" placeholder="email" name="userEmail">-->
+<!--    <button>send email</button>-->
+
+<!--</form>-->
+
+<!--<div class="users"></div>-->
+
+<!--<div class="target"></div>-->
+
+<!--<form action="" name="f1">-->
+<!--    <input type="text" name="login" placeholder="login">-->
+<!--    <button>send</button>-->
+<!--</form>-->
+
+
+<!--<ul class="dfsdfsd">-->
+<!--    <li class="asdsadasd"></li>-->
+<!--    <li></li>-->
+<!--    <li></li>-->
+<!--    <li></li>-->
+<!--    <li></li>-->
+<!--</ul>-->
+
+<!--<div class="thrth">-->
+<!--    <ul class="fpytlhyh">-->
+<!--        <li></li>-->
+<!--        <li></li>-->
+<!--        <li></li>-->
+<!--        <li class="sfsdfdsferert"></li>-->
+<!--        <li></li>-->
+<!--    </ul>-->
+<!--</div>-->
+<!--<div></div>-->
+
+<script>
+
+    // // DOM
+    //
+    // // console.log(document.head.children);// Витягує HTML колекцію
+    //
+    // // console.log(document.getElementById('h-1'));// Витягує елемент по id
+    //
+    // let htmlCollection = document.getElementsByClassName('menu'); // Витягує колекцію (псевдо масив) елементів по класу
+    // // console.log(htmlCollection);
+    //
+    // let htmlCollectionByTag = document.getElementsByTagName('h1');// Витягує колекцію (псевдо масив) елементів по тегу
+    // // console.log(htmlCollectionByTag);
+    //
+    // // let list1 = document.getElementById('list-1');
+    // // let collectionLiByUl = list1.children;
+    // // console.log(collectionLiByUl)
+    //
+    // console.log(document.querySelector('ul'));// Знаходить перший елемент по css селектору
+    // console.log(document.querySelectorAll('ul')); // Знаходить всі елементи по css селектору
+    //
+    // console.log(document.querySelector('.menu'));// Знаходить перший елемент по css селектору
+    // console.log(document.querySelectorAll('.menu')); // Знаходить всі елементи по css селектору
+    //
+    // let target = document.getElementById('target');
+    // target.innerText = 'Hello Okten'; // Міняє текст в блоці target
+    //
+    // target.innerHTML = '<h1> Hello World</h1>'; // Міняє текст в блоці target і тег HTML
+    //
+    // target.classList;// Витягує список класів
+    //
+    // target.classList.add('newClass');// Додає новий клас
+    //
+    // console.log(target.classList.contains('asd'));// Повертає TRUE or FALSE чи існує такий клас
+    //
+    // target.classList.toggle('asd');// Перемикач, якщо такий клас існує то він його видалить, якщо немає такого то додасть
+    //
+    // console.log(target.getAttribute('id'));// Витягує значення атрибута
+    //
+    // target.setAttribute('id', 'xxx');// Міняє значення атрибута з 'target' на 'xxx'
+    //
+    // console.log(target.previousElementSibling);// Повертає елемент до того з яким ми працюєм
+    // console.log(target.nextElementSibling);// Повертає елемент після того з яким ми працюєм
+    //
+    // console.log(target.children);// Повертає HTML елементи
+    // console.log(target.childNodes);// Повертає вузли
+    //
+    // let collectionOfDiv = document.getElementsByClassName('point');
+    //
+    // for (const elementDiv of collectionOfDiv) {
+    //     elementDiv.innerText = 'asdasdsdfsdfsdas';
+    // }
+
+    // Form API
+    //
+    // console.log(document.forms);// Витягує всі форми які є
+    //
+    // console.log(document.forms['f1']);// Витягує форму за ім'ям
+    //
+    // console.log(document.forms.f1);// Те саме витягує форму за ім'ям
+    //
+    // console.log(document.forms['f1'].userName);// Витягує input за ім'ям
+    //
+    // console.log(document.forms.f2.userEmail);// Витягує input за ім'ям
+
+    // Create element
+    //
+    // let h1 = document.createElement('h1'); // Створює елемент h1
+    // h1.innerText = 'Hello Okten';// Добавляє в елемент h1 текст
+    // document.body.appendChild(h1);// Додає один елемент в body
+    // document.body.append(h1);// Додає багато елементів в body
+    //
+    // const users = [
+    //     {name: 'СЕРГЕЙ', userName:'БЕДУХА', city: 'Kyiev', status: true },
+    //     {name: 'ИВАН', userName:'БУЧАКЧИЙСКИЙ', city: 'Lviv', status:false },
+    //     {name: 'АНТОН', userName:'ВАСИЛЕНКО', city: 'Kherson', status: true},
+    //     {name:'ЮРИЙ' , userName:'ГУРОВ', city: 'Harkiv', status: false},
+    //     {name: 'ИГОРЬ', userName:'ДЯНКОВ', city: 'Dnipro', status: true},
+    //     {name: 'ГЛІБ', userName:'КОВАЛЬОВ', city: 'Vinicya', status: true},
+    //     {name: 'СЕРГЕЙ', userName:'ЛЯШЕНКО', city: 'Kyiev', status:true },
+    //     {name: 'ВЛАДИСЛАВ', userName:'СЕМЕНКО', city:'Kyiev' , status:true },
+    //     {name: 'АНТОН', userName:'ТВЕРДОХЛІБ', city:'Lviv' , status:true },
+    //     {name: 'РУСЛАН', userName:'ФИЛЬЧАКОВ', city: 'Kyiev', status: false},
+    //     {name: 'АЛЕКСАНДР', userName:'ХАТЬКО', city:'Dnipro', status:true },
+    // ];
+    //
+    // let usersDiv = document.getElementsByClassName('users')[0];// Дістаєм перший елемент в колекції за класом
+    //
+    // for (const user of users) {
+    //     let div = document.createElement('div');
+    //     div.classList.add('user');
+    //     div.innerText = user.name
+    //     usersDiv.appendChild(div);
+    // }
+
+    // Events айвенти
+    //
+    //     let target = document.querySelector('.target');
+    //
+    // target.onclick = function (e) { // Спрацьовує на клік
+    //     console.log(e)
+    // };
+    //
+    // target.onmouseover = function (e) { // Спрацьовує при наведенні мишкою
+    //     console.log(e)
+    //
+    // };
+    //
+    // target.onmousemove = function (e) { // Спрацьовує при русі мишкою
+    //     console.log(e.clientX)
+    //
+    // };
+    //
+    // document.forms.f1.login.oninput = function (e) { // Виводить все, що ми вводим в input
+    //     let value = this.value;
+    //     console.log(value);
+    //     if (value.includes('asd')) {
+    //         alert('AY AY AY!!!!!')
+    //     }
+    //     // target.innerText = this.value; // Автоматично вводить в блоці все, що ми вводим в input
+    // };
+    //
+    // let f1 = document.forms.f1;
+    //
+    // f1.onsubmit = function (e) {
+    //     e.preventDefault();// Забороняє перезавантаження сторінки
+    //     console.log(this.login.value);// Зберігаєм то, що ввели в input
+    // };
+    //
+    // f1.addEventListener('submit', function (e) {
+    //     e.preventDefault();
+    //     console.log('submit 1')
+    // });                                          // addEventListener Одночасно можна виконувати дві дії submit
+    // f1.addEventListener('submit', function (e) {
+    //     e.preventDefault();
+    //     console.log('submit 2')
+    // });
+
+    // Recursion Рекурсія
+    //
+    // function explorer(htmlEement) {
+    //     console.log(htmlEement)
+    //     let children = htmlEement.children;
+    //     if (children.length !== 0) {
+    //         for (const child of children) {
+    //             explorer(child)
+    //         }
+    //     }
+    // }
+    //
+    // explorer(document.body);
+
+
+</script>
+</body>
+</html>
