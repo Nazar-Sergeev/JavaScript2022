@@ -329,10 +329,7 @@
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
 // за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив) характеристику headings, всі параграфи покласти в характеристику (масив) paragraphs
-// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
-// asd ->tab-> <asd></asd>
 //
-
 // let usersList = [
 //     {
 //         id: 1,
@@ -565,7 +562,7 @@
 //         }
 //     }
 // ];
-
+//
 // let divWrap = document.createElement('div');
 //
 // for (const user of usersList) {
@@ -610,7 +607,7 @@
 //     phone.innerText = `Phone: ${user.phone}`;
 //
 //     let website = document.createElement('p');
-//     website.innerText =`Web site: ${user.website}`;
+//     website.innerText = `Web site: ${user.website}`;
 //
 //     let company = document.createElement('ul');
 //
@@ -619,14 +616,92 @@
 //         let companyElement = document.createElement('li');
 //         companyElement.innerText = user.company[companyItem]
 //         company.appendChild(companyElement);
-//
 //     }
 //
-//     divUser.append(nameUser,surname,email,address,phone,website,company);
+//     divUser.append(nameUser, surname, email, address, phone, website, company);
 //     divWrap.appendChild(divUser);
 // }
 //
 // document.body.appendChild(divWrap);
+//
+// // let h1 = document.getElementsByTagName('h1');
+// // let h2 = document.getElementsByTagName('h2');
+// // let h3 = document.getElementsByTagName('h3');
+// // let h4 = document.getElementsByTagName('h4');
+// // let h5 = document.getElementsByTagName('h5');
+// // let h6 = document.getElementsByTagName('h6');
+//
+// let nodeListOf = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+// let p = document.getElementsByTagName('p');
+//
+// function explorer(page) {
+//     let array = [];
+//     // array.push(h1, h2, h3, h4, h5, h6, p);
+//     array.push(nodeListOf, p);
+//
+//     let children = page.children;
+//
+//     if (children.length !== 0) {
+//         for (const child of children) {
+//             explorer(child);
+//         }
+//     }
+//
+//     return array;
+// }
+//
+// const array = explorer(document.body);
+//
+// // let reduce = array.reduce((acc, value) => {
+// //     if (value === h1 && value.length !== 0
+// //         || value === h2 && value.length !== 0
+// //         || value === h3 && value.length !== 0
+// //         || value === h4 && value.length !== 0
+// //         || value === h5 && value.length !== 0
+// //         || value === h6 && value.length !== 0
+// //     ) {
+// //         acc.headings.push(value);
+// //     }
+// //     if (value === p && value.length !== 0) {
+// //         acc.paragraphs.push(value);
+// //     }
+// //     return acc;
+// // }, {headings: [], paragraphs: []});
+// //
+// // console.log(reduce)
+//
+// let reduce = array.reduce((acc, value) => {
+//
+//     if (value === nodeListOf && value.length !== 0) {
+//         acc.headings.push(value);
+//     }
+//     if (value === p && value.length !== 0) {
+//         acc.paragraphs.push(value);
+//     }
+//
+//     return acc;
+//
+// }, {headings: [], paragraphs: []});
+//
+// console.log(reduce);
+
+// зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
+// asd ->tab-> <asd></asd>
+//
+// let div = document.createElement('div');
+//
+// let input = document.getElementsByTagName('input')[0];
+//
+// input.onkeydown = function (e) {
+//     if (e.key === 'Tab') {
+//         div.remove();
+//         let newTag = document.createElement(`${input.value}`);
+//         document.body.appendChild(newTag);
+//     }
+// };
+//
+// document.body.appendChild(div);
+
 
 //                                              supper additional
 
