@@ -153,9 +153,6 @@
 //
 //     let ulHtmlElement = document.createElement('ul');
 //
-//     let divModule = document.createElement('div');
-//     divModule.appendChild(ulHtmlElement);
-//
 //     for (const el of element.modules) {
 //         let liHtmlElement = document.createElement('li');
 //         liHtmlElement.innerText = el;
@@ -163,7 +160,7 @@
 //         ulHtmlElement.appendChild(liHtmlElement);
 //     }
 //
-//     divElement.append(h2, paragraph, divModule);
+//     divElement.append(h2, paragraph, ulHtmlElement);
 //     divWrap.appendChild(divElement);
 // }
 // document.body.appendChild(divWrap);
