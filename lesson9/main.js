@@ -325,7 +325,9 @@
 //
 // document.body.appendChild(table);
 
+
 //                                              additional
+
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
 // за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив) характеристику headings, всі параграфи покласти в характеристику (масив) paragraphs
@@ -705,7 +707,7 @@
 // document.body.appendChild(div);
 
 
-//                                              supper additional
+//                                           supper additional
 
 
 // let users = [{
@@ -825,7 +827,6 @@
 //
 // blockContent.appendChild(ul);
 
-
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
 //     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
@@ -865,3 +866,23 @@
 //     },
 //
 // ];
+//
+// for (let i = 0; i < rules.length; i++) {
+//
+//     let ruleDiv = document.createElement('div');
+//
+//     let header = document.createElement('h2');
+//     header.innerText = `${i + 1}. ${rules[i].title}`
+//
+//     let p = document.createElement('p');
+//     p.innerText = rules[i].body;
+//
+//     ruleDiv.append(header,p);
+//     document.body.appendChild(ruleDiv);
+// }
+
+
+
+
+
+
